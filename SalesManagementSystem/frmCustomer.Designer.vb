@@ -22,20 +22,20 @@ Partial Class frmCustomer
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lblCustmerCode = New System.Windows.Forms.Label()
-        Me.txtCustmerCode = New System.Windows.Forms.TextBox()
-        Me.lblCusttmerName = New System.Windows.Forms.Label()
-        Me.txtCustmerName = New System.Windows.Forms.TextBox()
+        Me.lblCode = New System.Windows.Forms.Label()
+        Me.txtCode = New System.Windows.Forms.TextBox()
+        Me.lblName = New System.Windows.Forms.Label()
+        Me.txtName = New System.Windows.Forms.TextBox()
         Me.txtTel = New System.Windows.Forms.TextBox()
         Me.txtAddress = New System.Windows.Forms.TextBox()
         Me.txtMunicipalities = New System.Windows.Forms.TextBox()
         Me.txtPostCode = New System.Windows.Forms.TextBox()
-        Me.txtCustmerNameKana = New System.Windows.Forms.TextBox()
+        Me.txtNameKana = New System.Windows.Forms.TextBox()
         Me.lblAddress = New System.Windows.Forms.Label()
         Me.lblMunicipalities = New System.Windows.Forms.Label()
         Me.lblPrefectures = New System.Windows.Forms.Label()
         Me.lblPostCode = New System.Windows.Forms.Label()
-        Me.lblCustmerNameKana = New System.Windows.Forms.Label()
+        Me.lblNameKana = New System.Windows.Forms.Label()
         Me.lblTel = New System.Windows.Forms.Label()
         Me.lblMemo = New System.Windows.Forms.Label()
         Me.txtMemo = New System.Windows.Forms.TextBox()
@@ -52,7 +52,6 @@ Partial Class frmCustomer
         Me.lblPhoneNumber = New System.Windows.Forms.Label()
         Me.lblSign = New System.Windows.Forms.Label()
         Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.txtHonorificTitle = New System.Windows.Forms.TextBox()
         Me.txtPosition = New System.Windows.Forms.TextBox()
         Me.txtDepartment = New System.Windows.Forms.TextBox()
         Me.txtManagerName = New System.Windows.Forms.TextBox()
@@ -80,41 +79,42 @@ Partial Class frmCustomer
         Me.pnlGender = New System.Windows.Forms.Panel()
         Me.pnlBloodType = New System.Windows.Forms.Panel()
         Me.lblManagerForm = New System.Windows.Forms.Label()
+        Me.cboHonorificTitle = New System.Windows.Forms.ComboBox()
         Me.pnlGender.SuspendLayout()
         Me.pnlBloodType.SuspendLayout()
         Me.SuspendLayout()
         '
-        'lblCustmerCode
+        'lblCode
         '
-        Me.lblCustmerCode.AutoSize = True
-        Me.lblCustmerCode.Location = New System.Drawing.Point(83, 113)
-        Me.lblCustmerCode.Name = "lblCustmerCode"
-        Me.lblCustmerCode.Size = New System.Drawing.Size(85, 15)
-        Me.lblCustmerCode.TabIndex = 0
-        Me.lblCustmerCode.Text = "得意先コード"
+        Me.lblCode.AutoSize = True
+        Me.lblCode.Location = New System.Drawing.Point(83, 113)
+        Me.lblCode.Name = "lblCode"
+        Me.lblCode.Size = New System.Drawing.Size(85, 15)
+        Me.lblCode.TabIndex = 0
+        Me.lblCode.Text = "得意先コード"
         '
-        'txtCustmerCode
+        'txtCode
         '
-        Me.txtCustmerCode.Location = New System.Drawing.Point(196, 110)
-        Me.txtCustmerCode.Name = "txtCustmerCode"
-        Me.txtCustmerCode.Size = New System.Drawing.Size(100, 22)
-        Me.txtCustmerCode.TabIndex = 1
+        Me.txtCode.Location = New System.Drawing.Point(196, 110)
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.Size = New System.Drawing.Size(100, 22)
+        Me.txtCode.TabIndex = 1
         '
-        'lblCusttmerName
+        'lblName
         '
-        Me.lblCusttmerName.AutoSize = True
-        Me.lblCusttmerName.Location = New System.Drawing.Point(83, 142)
-        Me.lblCusttmerName.Name = "lblCusttmerName"
-        Me.lblCusttmerName.Size = New System.Drawing.Size(67, 15)
-        Me.lblCusttmerName.TabIndex = 2
-        Me.lblCusttmerName.Text = "得意先名"
+        Me.lblName.AutoSize = True
+        Me.lblName.Location = New System.Drawing.Point(83, 142)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(67, 15)
+        Me.lblName.TabIndex = 2
+        Me.lblName.Text = "得意先名"
         '
-        'txtCustmerName
+        'txtName
         '
-        Me.txtCustmerName.Location = New System.Drawing.Point(196, 138)
-        Me.txtCustmerName.Name = "txtCustmerName"
-        Me.txtCustmerName.Size = New System.Drawing.Size(100, 22)
-        Me.txtCustmerName.TabIndex = 3
+        Me.txtName.Location = New System.Drawing.Point(196, 138)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(100, 22)
+        Me.txtName.TabIndex = 3
         '
         'txtTel
         '
@@ -144,12 +144,12 @@ Partial Class frmCustomer
         Me.txtPostCode.Size = New System.Drawing.Size(100, 22)
         Me.txtPostCode.TabIndex = 7
         '
-        'txtCustmerNameKana
+        'txtNameKana
         '
-        Me.txtCustmerNameKana.Location = New System.Drawing.Point(196, 169)
-        Me.txtCustmerNameKana.Name = "txtCustmerNameKana"
-        Me.txtCustmerNameKana.Size = New System.Drawing.Size(100, 22)
-        Me.txtCustmerNameKana.TabIndex = 8
+        Me.txtNameKana.Location = New System.Drawing.Point(196, 169)
+        Me.txtNameKana.Name = "txtNameKana"
+        Me.txtNameKana.Size = New System.Drawing.Size(100, 22)
+        Me.txtNameKana.TabIndex = 8
         '
         'lblAddress
         '
@@ -187,14 +187,14 @@ Partial Class frmCustomer
         Me.lblPostCode.TabIndex = 12
         Me.lblPostCode.Text = "郵便番号"
         '
-        'lblCustmerNameKana
+        'lblNameKana
         '
-        Me.lblCustmerNameKana.AutoSize = True
-        Me.lblCustmerNameKana.Location = New System.Drawing.Point(83, 169)
-        Me.lblCustmerNameKana.Name = "lblCustmerNameKana"
-        Me.lblCustmerNameKana.Size = New System.Drawing.Size(90, 15)
-        Me.lblCustmerNameKana.TabIndex = 13
-        Me.lblCustmerNameKana.Text = "得意先名カナ"
+        Me.lblNameKana.AutoSize = True
+        Me.lblNameKana.Location = New System.Drawing.Point(83, 169)
+        Me.lblNameKana.Name = "lblNameKana"
+        Me.lblNameKana.Size = New System.Drawing.Size(90, 15)
+        Me.lblNameKana.TabIndex = 13
+        Me.lblNameKana.Text = "得意先名カナ"
         '
         'lblTel
         '
@@ -336,13 +336,6 @@ Partial Class frmCustomer
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(100, 22)
         Me.txtEmail.TabIndex = 29
-        '
-        'txtHonorificTitle
-        '
-        Me.txtHonorificTitle.Location = New System.Drawing.Point(520, 198)
-        Me.txtHonorificTitle.Name = "txtHonorificTitle"
-        Me.txtHonorificTitle.Size = New System.Drawing.Size(100, 22)
-        Me.txtHonorificTitle.TabIndex = 30
         '
         'txtPosition
         '
@@ -584,11 +577,20 @@ Partial Class frmCustomer
         Me.lblManagerForm.TabIndex = 57
         Me.lblManagerForm.Text = "担当者情報"
         '
+        'cboHonorificTitle
+        '
+        Me.cboHonorificTitle.FormattingEnabled = True
+        Me.cboHonorificTitle.Location = New System.Drawing.Point(519, 198)
+        Me.cboHonorificTitle.Name = "cboHonorificTitle"
+        Me.cboHonorificTitle.Size = New System.Drawing.Size(101, 23)
+        Me.cboHonorificTitle.TabIndex = 58
+        '
         'frmCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 628)
+        Me.Controls.Add(Me.cboHonorificTitle)
         Me.Controls.Add(Me.lblManagerForm)
         Me.Controls.Add(Me.pnlBloodType)
         Me.Controls.Add(Me.pnlGender)
@@ -610,7 +612,6 @@ Partial Class frmCustomer
         Me.Controls.Add(Me.txtManagerName)
         Me.Controls.Add(Me.txtDepartment)
         Me.Controls.Add(Me.txtPosition)
-        Me.Controls.Add(Me.txtHonorificTitle)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.lblSign)
         Me.Controls.Add(Me.lblPhoneNumber)
@@ -627,23 +628,23 @@ Partial Class frmCustomer
         Me.Controls.Add(Me.txtMemo)
         Me.Controls.Add(Me.lblMemo)
         Me.Controls.Add(Me.lblTel)
-        Me.Controls.Add(Me.lblCustmerNameKana)
+        Me.Controls.Add(Me.lblNameKana)
         Me.Controls.Add(Me.lblPostCode)
         Me.Controls.Add(Me.lblPrefectures)
         Me.Controls.Add(Me.lblMunicipalities)
         Me.Controls.Add(Me.lblAddress)
-        Me.Controls.Add(Me.txtCustmerNameKana)
+        Me.Controls.Add(Me.txtNameKana)
         Me.Controls.Add(Me.txtPostCode)
         Me.Controls.Add(Me.txtMunicipalities)
         Me.Controls.Add(Me.txtAddress)
         Me.Controls.Add(Me.txtTel)
-        Me.Controls.Add(Me.txtCustmerName)
-        Me.Controls.Add(Me.lblCusttmerName)
-        Me.Controls.Add(Me.txtCustmerCode)
-        Me.Controls.Add(Me.lblCustmerCode)
+        Me.Controls.Add(Me.txtName)
+        Me.Controls.Add(Me.lblName)
+        Me.Controls.Add(Me.txtCode)
+        Me.Controls.Add(Me.lblCode)
         Me.Font = New System.Drawing.Font("MS UI Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Name = "frmCustomer"
-        Me.Text = "4"
+        Me.Text = "得意先マスタ"
         Me.pnlGender.ResumeLayout(False)
         Me.pnlGender.PerformLayout()
         Me.pnlBloodType.ResumeLayout(False)
@@ -653,20 +654,20 @@ Partial Class frmCustomer
 
     End Sub
 
-    Friend WithEvents lblCustmerCode As Label
-    Friend WithEvents txtCustmerCode As TextBox
-    Friend WithEvents lblCusttmerName As Label
-    Friend WithEvents txtCustmerName As TextBox
+    Friend WithEvents lblCode As Label
+    Friend WithEvents txtCode As TextBox
+    Friend WithEvents lblName As Label
+    Friend WithEvents txtName As TextBox
     Friend WithEvents txtTel As TextBox
     Friend WithEvents txtAddress As TextBox
     Friend WithEvents txtMunicipalities As TextBox
     Friend WithEvents txtPostCode As TextBox
-    Friend WithEvents txtCustmerNameKana As TextBox
+    Friend WithEvents txtNameKana As TextBox
     Friend WithEvents lblAddress As Label
     Friend WithEvents lblMunicipalities As Label
     Friend WithEvents lblPrefectures As Label
     Friend WithEvents lblPostCode As Label
-    Friend WithEvents lblCustmerNameKana As Label
+    Friend WithEvents lblNameKana As Label
     Friend WithEvents lblTel As Label
     Friend WithEvents lblMemo As Label
     Friend WithEvents txtMemo As TextBox
@@ -683,7 +684,6 @@ Partial Class frmCustomer
     Friend WithEvents lblPhoneNumber As Label
     Friend WithEvents lblSign As Label
     Friend WithEvents txtEmail As TextBox
-    Friend WithEvents txtHonorificTitle As TextBox
     Friend WithEvents txtPosition As TextBox
     Friend WithEvents txtDepartment As TextBox
     Friend WithEvents txtManagerName As TextBox
@@ -711,4 +711,5 @@ Partial Class frmCustomer
     Friend WithEvents pnlGender As Panel
     Friend WithEvents pnlBloodType As Panel
     Friend WithEvents lblManagerForm As Label
+    Friend WithEvents cboHonorificTitle As ComboBox
 End Class
