@@ -80,6 +80,8 @@ Partial Class frmCustomer
         Me.pnlBloodType = New System.Windows.Forms.Panel()
         Me.lblManagerForm = New System.Windows.Forms.Label()
         Me.cboHonorificTitle = New System.Windows.Forms.ComboBox()
+        Me.lblFax = New System.Windows.Forms.Label()
+        Me.txtFax = New System.Windows.Forms.TextBox()
         Me.pnlGender.SuspendLayout()
         Me.pnlBloodType.SuspendLayout()
         Me.SuspendLayout()
@@ -114,21 +116,21 @@ Partial Class frmCustomer
         Me.txtName.Location = New System.Drawing.Point(196, 138)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(100, 22)
-        Me.txtName.TabIndex = 3
+        Me.txtName.TabIndex = 2
         '
         'txtTel
         '
         Me.txtTel.Location = New System.Drawing.Point(196, 309)
         Me.txtTel.Name = "txtTel"
         Me.txtTel.Size = New System.Drawing.Size(100, 22)
-        Me.txtTel.TabIndex = 4
+        Me.txtTel.TabIndex = 8
         '
         'txtAddress
         '
         Me.txtAddress.Location = New System.Drawing.Point(196, 281)
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(100, 22)
-        Me.txtAddress.TabIndex = 5
+        Me.txtAddress.TabIndex = 7
         '
         'txtMunicipalities
         '
@@ -142,14 +144,15 @@ Partial Class frmCustomer
         Me.txtPostCode.Location = New System.Drawing.Point(196, 197)
         Me.txtPostCode.Name = "txtPostCode"
         Me.txtPostCode.Size = New System.Drawing.Size(100, 22)
-        Me.txtPostCode.TabIndex = 7
+        Me.txtPostCode.TabIndex = 4
         '
         'txtNameKana
         '
+        Me.txtNameKana.ImeMode = System.Windows.Forms.ImeMode.Katakana
         Me.txtNameKana.Location = New System.Drawing.Point(196, 169)
         Me.txtNameKana.Name = "txtNameKana"
         Me.txtNameKana.Size = New System.Drawing.Size(100, 22)
-        Me.txtNameKana.TabIndex = 8
+        Me.txtNameKana.TabIndex = 3
         '
         'lblAddress
         '
@@ -208,7 +211,7 @@ Partial Class frmCustomer
         'lblMemo
         '
         Me.lblMemo.AutoSize = True
-        Me.lblMemo.Location = New System.Drawing.Point(87, 338)
+        Me.lblMemo.Location = New System.Drawing.Point(87, 364)
         Me.lblMemo.Name = "lblMemo"
         Me.lblMemo.Size = New System.Drawing.Size(28, 15)
         Me.lblMemo.TabIndex = 15
@@ -216,11 +219,11 @@ Partial Class frmCustomer
         '
         'txtMemo
         '
-        Me.txtMemo.Location = New System.Drawing.Point(196, 338)
+        Me.txtMemo.Location = New System.Drawing.Point(196, 361)
         Me.txtMemo.Multiline = True
         Me.txtMemo.Name = "txtMemo"
         Me.txtMemo.Size = New System.Drawing.Size(136, 59)
-        Me.txtMemo.TabIndex = 16
+        Me.txtMemo.TabIndex = 10
         '
         'lblEmail
         '
@@ -335,56 +338,56 @@ Partial Class frmCustomer
         Me.txtEmail.Location = New System.Drawing.Point(520, 226)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(100, 22)
-        Me.txtEmail.TabIndex = 29
+        Me.txtEmail.TabIndex = 15
         '
         'txtPosition
         '
         Me.txtPosition.Location = New System.Drawing.Point(520, 170)
         Me.txtPosition.Name = "txtPosition"
         Me.txtPosition.Size = New System.Drawing.Size(100, 22)
-        Me.txtPosition.TabIndex = 31
+        Me.txtPosition.TabIndex = 13
         '
         'txtDepartment
         '
         Me.txtDepartment.Location = New System.Drawing.Point(520, 142)
         Me.txtDepartment.Name = "txtDepartment"
         Me.txtDepartment.Size = New System.Drawing.Size(100, 22)
-        Me.txtDepartment.TabIndex = 32
+        Me.txtDepartment.TabIndex = 12
         '
         'txtManagerName
         '
         Me.txtManagerName.Location = New System.Drawing.Point(520, 110)
         Me.txtManagerName.Name = "txtManagerName"
         Me.txtManagerName.Size = New System.Drawing.Size(100, 22)
-        Me.txtManagerName.TabIndex = 33
+        Me.txtManagerName.TabIndex = 11
         '
         'txtPhoneNumber
         '
         Me.txtPhoneNumber.Location = New System.Drawing.Point(519, 420)
         Me.txtPhoneNumber.Name = "txtPhoneNumber"
         Me.txtPhoneNumber.Size = New System.Drawing.Size(100, 22)
-        Me.txtPhoneNumber.TabIndex = 34
+        Me.txtPhoneNumber.TabIndex = 21
         '
         'txtSign
         '
         Me.txtSign.Location = New System.Drawing.Point(519, 392)
         Me.txtSign.Name = "txtSign"
         Me.txtSign.Size = New System.Drawing.Size(100, 22)
-        Me.txtSign.TabIndex = 35
+        Me.txtSign.TabIndex = 20
         '
         'txtAge
         '
         Me.txtAge.Location = New System.Drawing.Point(519, 364)
         Me.txtAge.Name = "txtAge"
         Me.txtAge.Size = New System.Drawing.Size(100, 22)
-        Me.txtAge.TabIndex = 36
+        Me.txtAge.TabIndex = 19
         '
         'txtBirthday
         '
         Me.txtBirthday.Location = New System.Drawing.Point(519, 335)
         Me.txtBirthday.Name = "txtBirthday"
         Me.txtBirthday.Size = New System.Drawing.Size(100, 22)
-        Me.txtBirthday.TabIndex = 37
+        Me.txtBirthday.TabIndex = 18
         '
         'rbtMen
         '
@@ -436,7 +439,7 @@ Partial Class frmCustomer
         Me.rbtA.Location = New System.Drawing.Point(3, 12)
         Me.rbtA.Name = "rbtA"
         Me.rbtA.Size = New System.Drawing.Size(37, 19)
-        Me.rbtA.TabIndex = 42
+        Me.rbtA.TabIndex = 38
         Me.rbtA.TabStop = True
         Me.rbtA.Text = "A"
         Me.rbtA.UseVisualStyleBackColor = True
@@ -484,28 +487,28 @@ Partial Class frmCustomer
         Me.txtUpdateDate.Location = New System.Drawing.Point(414, 507)
         Me.txtUpdateDate.Name = "txtUpdateDate"
         Me.txtUpdateDate.Size = New System.Drawing.Size(100, 22)
-        Me.txtUpdateDate.TabIndex = 47
+        Me.txtUpdateDate.TabIndex = 25
         '
         'txtResistDate
         '
         Me.txtResistDate.Location = New System.Drawing.Point(414, 462)
         Me.txtResistDate.Name = "txtResistDate"
         Me.txtResistDate.Size = New System.Drawing.Size(100, 22)
-        Me.txtResistDate.TabIndex = 48
+        Me.txtResistDate.TabIndex = 23
         '
         'txtUpdater
         '
         Me.txtUpdater.Location = New System.Drawing.Point(152, 507)
         Me.txtUpdater.Name = "txtUpdater"
         Me.txtUpdater.Size = New System.Drawing.Size(100, 22)
-        Me.txtUpdater.TabIndex = 49
+        Me.txtUpdater.TabIndex = 24
         '
         'txtRegister
         '
         Me.txtRegister.Location = New System.Drawing.Point(152, 462)
         Me.txtRegister.Name = "txtRegister"
         Me.txtRegister.Size = New System.Drawing.Size(100, 22)
-        Me.txtRegister.TabIndex = 50
+        Me.txtRegister.TabIndex = 22
         '
         'lblTitle
         '
@@ -524,7 +527,7 @@ Partial Class frmCustomer
         Me.btnRegist.Location = New System.Drawing.Point(577, 519)
         Me.btnRegist.Name = "btnRegist"
         Me.btnRegist.Size = New System.Drawing.Size(75, 23)
-        Me.btnRegist.TabIndex = 52
+        Me.btnRegist.TabIndex = 26
         Me.btnRegist.Text = "登録"
         Me.btnRegist.UseVisualStyleBackColor = False
         '
@@ -535,17 +538,18 @@ Partial Class frmCustomer
         Me.btnDelete.Location = New System.Drawing.Point(678, 519)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(75, 23)
-        Me.btnDelete.TabIndex = 53
+        Me.btnDelete.TabIndex = 27
         Me.btnDelete.Text = "削除"
         Me.btnDelete.UseVisualStyleBackColor = False
         '
         'cboPrefectures
         '
         Me.cboPrefectures.FormattingEnabled = True
+        Me.cboPrefectures.Items.AddRange(New Object() {"北海道", "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県", "茨城県", "栃木県", "群馬県", "埼玉県", "千葉県", "東京都", "神奈川県", "新潟県", "富山県", "石川県", "福井県", "山梨県", "長野県", "岐阜県", "静岡県", "愛知県", "三重県", "滋賀県", "京都府", "大阪府", "兵庫県", "奈良県", "和歌山県", "鳥取県", "島根県", "岡山県", "広島県", "山口県", "徳島県", "香川県", "愛媛県", "高知県", "福岡県", "佐賀県", "長崎県", "熊本県", "大分県", "宮崎県", "鹿児島県", "沖縄県"})
         Me.cboPrefectures.Location = New System.Drawing.Point(196, 226)
         Me.cboPrefectures.Name = "cboPrefectures"
         Me.cboPrefectures.Size = New System.Drawing.Size(80, 23)
-        Me.cboPrefectures.TabIndex = 54
+        Me.cboPrefectures.TabIndex = 5
         '
         'pnlGender
         '
@@ -554,7 +558,7 @@ Partial Class frmCustomer
         Me.pnlGender.Location = New System.Drawing.Point(520, 254)
         Me.pnlGender.Name = "pnlGender"
         Me.pnlGender.Size = New System.Drawing.Size(129, 31)
-        Me.pnlGender.TabIndex = 55
+        Me.pnlGender.TabIndex = 16
         '
         'pnlBloodType
         '
@@ -565,7 +569,7 @@ Partial Class frmCustomer
         Me.pnlBloodType.Location = New System.Drawing.Point(519, 291)
         Me.pnlBloodType.Name = "pnlBloodType"
         Me.pnlBloodType.Size = New System.Drawing.Size(200, 33)
-        Me.pnlBloodType.TabIndex = 56
+        Me.pnlBloodType.TabIndex = 17
         '
         'lblManagerForm
         '
@@ -580,16 +584,35 @@ Partial Class frmCustomer
         'cboHonorificTitle
         '
         Me.cboHonorificTitle.FormattingEnabled = True
+        Me.cboHonorificTitle.Items.AddRange(New Object() {"様", "御中", "先生", "殿"})
         Me.cboHonorificTitle.Location = New System.Drawing.Point(519, 198)
         Me.cboHonorificTitle.Name = "cboHonorificTitle"
         Me.cboHonorificTitle.Size = New System.Drawing.Size(101, 23)
-        Me.cboHonorificTitle.TabIndex = 58
+        Me.cboHonorificTitle.TabIndex = 14
+        '
+        'lblFax
+        '
+        Me.lblFax.AutoSize = True
+        Me.lblFax.Location = New System.Drawing.Point(83, 338)
+        Me.lblFax.Name = "lblFax"
+        Me.lblFax.Size = New System.Drawing.Size(33, 15)
+        Me.lblFax.TabIndex = 60
+        Me.lblFax.Text = "FAX"
+        '
+        'txtFax
+        '
+        Me.txtFax.Location = New System.Drawing.Point(196, 335)
+        Me.txtFax.Name = "txtFax"
+        Me.txtFax.Size = New System.Drawing.Size(100, 22)
+        Me.txtFax.TabIndex = 9
         '
         'frmCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 628)
+        Me.Controls.Add(Me.lblFax)
+        Me.Controls.Add(Me.txtFax)
         Me.Controls.Add(Me.cboHonorificTitle)
         Me.Controls.Add(Me.lblManagerForm)
         Me.Controls.Add(Me.pnlBloodType)
@@ -712,4 +735,6 @@ Partial Class frmCustomer
     Friend WithEvents pnlBloodType As Panel
     Friend WithEvents lblManagerForm As Label
     Friend WithEvents cboHonorificTitle As ComboBox
+    Friend WithEvents lblFax As Label
+    Friend WithEvents txtFax As TextBox
 End Class
