@@ -1,6 +1,6 @@
 ﻿Public Class Common
 
-    Public Shared Sub ageCalc(customer As Form)
+    Public Shared Function ageCalc(customer As Form) As Integer
 
         'フォーム内から値を取得し格納する為の変数
         Dim formDate As DateTime
@@ -18,12 +18,12 @@
             age -= 1
         End If
 
-        customer.Controls("txtAge").Text = age
+        Return age
 
-    End Sub
+    End Function
 
 
-    Public Shared Sub signCalc(customer As Form)
+    Public Shared Function signCalc(customer As Form) As String
 
         'フォーム内から値を取得し格納する為の変数
         Dim formDate As DateTime
@@ -132,28 +132,9 @@
             End If
         End If
 
-        customer.Controls("txtSign").Text = Sign
+        Return Sign
 
-    End Sub
-
-    Public Shared Sub dayCalc(customer As Form)
-
-        'フォーム内から値を取得し格納する為の変数
-        Dim formDate As DateTime
-
-        '今日の日付を取得
-        Dim today = DateTime.Now
-
-        '値を格納
-        formDate = DateTime.ParseExact(customer.Controls("txtBirthday").Text, "yyyy/MM/dd", Nothing)
-
-        If (formDate > today) Then
-            customer.Controls("txtBirthday").Text = ""
-            customer.Controls("txtAge").Text = ""
-            customer.Controls("txtSign").Text = ""
-        End If
-
-    End Sub
+    End Function
 
     Public Shared Function GetGender(customer As Form) As String
         Dim gender As String = ""

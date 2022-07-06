@@ -8,7 +8,16 @@
 
         Common.ageCalc(Me)
         Common.signCalc(Me)
-        Common.dayCalc(Me)
+
+        txtAge.Text = Common.ageCalc(Me)
+        txtSign.Text = Common.signCalc(Me)
+
+        Dim today = DateTime.Now
+        If (txtBirthday.Text > today) Then
+            txtBirthday.Text = ""
+            txtAge.Text = ""
+            txtSign.Text = ""
+        End If
 
     End Sub
 
