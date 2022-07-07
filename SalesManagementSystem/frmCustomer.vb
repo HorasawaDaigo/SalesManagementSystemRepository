@@ -1,6 +1,25 @@
 ﻿Public Class frmCustomer
-
+    Public dt As DataTable
     Private Sub frmCustmer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        If IsNothing(Me.dt) Then
+            Exit Sub
+        End If
+        Dim row As DataRow = dt.Rows(0)
+        For Each ctrl As Windows.Forms.Control In Me.Controls
+            If Not ctrl.Name.StartsWith("lbl") AndAlso Not ctrl.Name.StartsWith("btn") AndAlso Not ctrl.Name.StartsWith("rbt") Then
+                If ctrl.Name.StartsWith("txt") OrElse ctrl.Name.StartsWith("cbo") Then
+                    ctrl.Text = row(ctrl.Name.Substring(3)).ToString
+                End If
+                If ctrl.Name.StartsWith("pnl") Then
+                    For Each rbt As Windows.Forms.RadioButton In ctrl.Controls
+                        If rbt.Text = row(ctrl.Name.Substring(3)).ToString Then
+                            rbt.Checked = True
+                        End If
+                    Next
+                End If
+            End If
+        Next
 
     End Sub
 
@@ -8,16 +27,7 @@
 
         Common.ageCalc(Me)
         Common.signCalc(Me)
-
-        txtAge.Text = Common.ageCalc(Me)
-        txtSign.Text = Common.signCalc(Me)
-
-        Dim today = DateTime.Now
-        If (txtBirthday.Text > today) Then
-            txtBirthday.Text = ""
-            txtAge.Text = ""
-            txtSign.Text = ""
-        End If
+        Check(Me)
 
     End Sub
 

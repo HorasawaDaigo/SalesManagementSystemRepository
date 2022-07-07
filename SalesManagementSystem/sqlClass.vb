@@ -107,4 +107,178 @@
 
     End Sub
 
+    Public Shared Function sqlSearch(customer As Form) As BindingSource
+
+        If (customer.Controls("txtName").Text = "") Then
+
+            Using Conn As New System.Data.SqlClient.SqlConnection
+
+                Conn.ConnectionString =
+                          ("Data Source=INF-21-022X\SQLEXPRESS;" &
+                           "Initial Catalog=SalesManagementSystem;" &
+                           "Integrated Security=SSPI;")
+                Conn.Open()
+
+                Dim cd As New SqlClient.SqlCommand
+                Dim SQL1 As String
+
+                SQL1 = ""
+                SQL1 &= "SELECT Code,Name FROM frmCustomer WHERE"
+                SQL1 &= "("
+                SQL1 &= "Code ="
+                SQL1 &= "'" & customer.Controls("txtCode").Text & "'"
+                SQL1 &= ")"
+
+                'SQLコマンド設定
+                cd.CommandText = SQL1
+                cd.Connection = Conn
+                cd.ExecuteNonQuery()
+
+                Dim Ad As New System.Data.SqlClient.SqlDataAdapter
+                Ad = New System.Data.SqlClient.SqlDataAdapter(SQL1, Conn)
+
+                Dim dt As New DataTable
+
+                Ad.Fill(dt)
+
+                Dim Source As New BindingSource
+
+                Source.DataSource = dt
+
+                Return Source
+
+            End Using
+
+        End If
+
+        If (customer.Controls("txtCode").Text = "") Then
+
+            Using Conn As New System.Data.SqlClient.SqlConnection
+
+                Conn.ConnectionString =
+                          ("Data Source=INF-21-022X\SQLEXPRESS;" &
+                           "Initial Catalog=SalesManagementSystem;" &
+                           "Integrated Security=SSPI;")
+                Conn.Open()
+
+                Dim cd As New SqlClient.SqlCommand
+                Dim SQL1 As String
+
+                SQL1 = ""
+                SQL1 &= "SELECT Code,Name FROM frmCustomer WHERE"
+                SQL1 &= "("
+                SQL1 &= "Name LIKE "
+                SQL1 &= "'%" & customer.Controls("txtName").Text & "%'"
+                SQL1 &= ")"
+
+                'SQLコマンド設定
+                cd.CommandText = SQL1
+                cd.Connection = Conn
+                cd.ExecuteNonQuery()
+
+                Dim Ad As New System.Data.SqlClient.SqlDataAdapter
+                Ad = New System.Data.SqlClient.SqlDataAdapter(SQL1, Conn)
+
+                Dim dt As New DataTable
+
+                Ad.Fill(dt)
+
+                Dim Source As New BindingSource
+
+                Source.DataSource = dt
+
+                Return Source
+
+            End Using
+
+        End If
+
+        If (customer.Controls("txtCode").Text <> "" And customer.Controls("txtName").Text <> "") Then
+
+            Using Conn As New System.Data.SqlClient.SqlConnection
+
+                Conn.ConnectionString =
+                          ("Data Source=INF-21-022X\SQLEXPRESS;" &
+                           "Initial Catalog=SalesManagementSystem;" &
+                           "Integrated Security=SSPI;")
+                Conn.Open()
+
+                Dim cd As New SqlClient.SqlCommand
+                Dim SQL1 As String
+
+                SQL1 = ""
+                SQL1 &= "SELECT Code,Name FROM frmCustomer WHERE"
+                SQL1 &= "("
+                SQL1 &= "Code ="
+                SQL1 &= "'" & customer.Controls("txtCode").Text & "'"
+                SQL1 &= "AND "
+                SQL1 &= "Name LIKE "
+                SQL1 &= "'%" & customer.Controls("txtName").Text & "%'"
+                SQL1 &= ")"
+
+                'SQLコマンド設定
+                cd.CommandText = SQL1
+                cd.Connection = Conn
+                cd.ExecuteNonQuery()
+
+                Dim Ad As New System.Data.SqlClient.SqlDataAdapter
+                Ad = New System.Data.SqlClient.SqlDataAdapter(SQL1, Conn)
+
+                Dim dt As New DataTable
+
+                Ad.Fill(dt)
+
+                Dim Source As New BindingSource
+
+                Source.DataSource = dt
+
+                Return Source
+
+            End Using
+
+        End If
+    End Function
+
+
+    Public Shared Function inputInformation(customer As Form)
+
+
+        Using Conn As New System.Data.SqlClient.SqlConnection
+
+            Conn.ConnectionString =
+                      ("Data Source=INF-21-022X\SQLEXPRESS;" &
+                       "Initial Catalog=SalesManagementSystem;" &
+                       "Integrated Security=SSPI;")
+            Conn.Open()
+
+            Dim cd As New SqlClient.SqlCommand
+            Dim SQL1 As String
+
+            SQL1 = ""
+            SQL1 &= "SELECT * FROM frmCustomer WHERE"
+            SQL1 &= "("
+            SQL1 &= "Code ="
+            SQL1 &= "'" & customer.Controls("txtCode").Text & "'"
+            SQL1 &= ")"
+
+            'SQLコマンド設定
+            cd.CommandText = SQL1
+            cd.Connection = Conn
+            cd.ExecuteNonQuery()
+
+            Dim Ad As New System.Data.SqlClient.SqlDataAdapter
+            Ad = New System.Data.SqlClient.SqlDataAdapter(SQL1, Conn)
+
+            Dim dt As New DataTable
+
+            Ad.Fill(dt)
+
+            Return dt
+
+        End Using
+
+    End Function
+
+
+
 End Class
